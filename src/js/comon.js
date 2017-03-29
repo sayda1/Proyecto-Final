@@ -2,8 +2,6 @@ $(document).ready(init);
 function init(){
     initMap();
     $('#informacion').click(informate);
-    //listaCarros();
-   
 }
 var map;
 function initMap() {

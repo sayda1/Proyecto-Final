@@ -25,6 +25,7 @@
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "sweetalert": "^1.1.3"
   }
 }

@@ -15,23 +15,27 @@ function get_regiones(){
 		{"name": "concepcion <span class='kilomeros'>500</span>","distance": 0, "val":"9" },
 		{"name": "temuco <span class='kilomeros'>690</span>","distance": 0, "val":"10"	 },
 		{"name": "valdivia <span class='kilomeros'>148</span>","distance": 0, "val":"11" },
-		{"name": "puerto_montt <span class='kilomeros'>1032</span>","distance": 0, "val":"12 "},
-		{"name": "coyhaique <span class='kilomeros'>18888</span>","distance": 0, "val":"13" },
+		{"name": "puerto_montt <span class='kilomeros'>1032</span>","distance": 0, "val":"12"},
+		{"name":"coyhaique <span class='kilomeros'>18888</span>","distance": 0, "val":"13"},
 		{"name": "punta_arenas <span class='kilomeros'>3004</span>","distance": 0, "val":"14" },	
-		{"name": "santiago <span class='kilomeros'>1006</span>","distance": 0, "val":"15" }
+		{"name": "santiago <span class='kilomeros'>1006</span>","distance": 0, "val":"15"}
 	];
+    
     var carga='';
     for(var i in listaCiudades){
-        var html ='<option id="'+i+'" value="'+listaCiudades[i].val+'">'+listaCiudades[i].name+'</option>';
+     var html =
+    '<option value="'+listaCiudades[i].val+'">'+listaCiudades[i].name+'</option>';
         carga+=html;
     }
     var selec = $('.selectpicker').html(carga);
-   $('#buscar').click(vehiculos);
+    $('#buscar').click(elijirVehiculos);
+    
 }
 
 function vehiculos(){
     var origen =$('#origen');
     var destino =$('#destino');
+    
     if(origen.val()==0 ||destino.val()==0){
         alert('Elija una opcion');
     }else if (origen.val()==destino.val()){
