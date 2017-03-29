@@ -46,14 +46,10 @@
     #info .caja img {
       width: 50%;
       margin: 0; }
-    #info .caja p {
-      font-size: 10px;
-      margin: 0;
-      font-weight: 600; }
     #info .caja .col-xs-4 {
       margin: 0; }
   #info h4 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     margin: 0; }
   #info .row input {

@@ -11,5 +11,6 @@ function initMap() {
   });
 }
 function informate(){
+    $('#secDestinoOrigen').hide();
     $('#informate').show(900);
 }

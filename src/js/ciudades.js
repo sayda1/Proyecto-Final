@@ -33,6 +33,7 @@ function get_regiones(){
     var selec = $('.selectpicker').html(carga);
     
     $('#buscar').click(elijirVehiculos);
+    $('.kilomeros').css('dispay',' none');
     
 }
 ///funcion para aparicion de vehiculos 
@@ -41,9 +42,9 @@ function elijirVehiculos(){
     var destino =$('#destino');
     
     if(origen.val()==0 ||destino.val()==0){
-        alert('Elija una opcion');
+        sweetAlert('Elija una opcion');
     }else if (origen.val()==destino.val()){
-        alert("se dirige a la misma cuidad.")
+        sweetAlert("se dirige a la misma cuidad.")
     }else{
         $('#info').show(100);
         listaVehiculos ();
@@ -80,13 +81,128 @@ function listaVehiculos (){
     for (var x in lista){
         var htmlVehiculos='<div class="col-xs-4">'+lista[x].input+'</div>'+
             '<div class="col-xs-4"><img src="'+lista[x].imagen+'" alt=""></div>'+
-            '<div class="col-xs-4"><h3>'+lista[x].texto+'</h3></div>';
+            '<div class="col-xs-4"><h4>'+lista[x].texto+'</h4></div>';
         carga+=htmlVehiculos;
     };
     $('#vehiculos').html(carga);
+    $('#moto').click(viajeMoto);
+    $('#auto').click(viajeAuto);
+    $('#camioneta').click(viajeCamaioneta);
+    $('#camion').click(viajeCamaion);
+    
+}
+var mutiplicar;
+function viajeMoto (){
+    
+    var pasajeros = $('#pasajeros').val();    
+    var distancia=$('#destino').val();
+    var origen=$('#origen').val();
+    
+    if (pasajeros==''){
+        sweetAlert('Ingre el numero de pasajeros');
+    }else if(pasajeros =='1'||pasajeros=="2"){
+        
+        mutiplicar = ((distancia + origen) * 763);
+        var resultado=parseInt(mutiplicar/ pasajeros);
+        alert('El presio total del viaje ' + '$'+mutiplicar);
+        $('#compartir').click(compartirViaje);
+    }else{
+        sweetAlert('Maximo 2 pasajeros');
+    }
+}
+function viajeAuto(){
+    var pasajeros = $('#pasajeros').val();
+    var distancia=$('#destino').val();
+    var origen=$('#origen').val();
+    if (pasajeros==''){
+        sweetAlert('Ingre el numero de pasajeros');
+    }else if(pasajeros =='1'||pasajeros=="2"||pasajeros=="3"||pasajeros=="4"||pasajeros=="5"){
+        mutiplicar = ((origen + distancia ) * 763);
+        alert('El presio total del viaje' +'$'+mutiplicar);
+        $('#compartir').click(compartirAuto);
+    }else{
+        sweetAlert('Maximo 5 pasajeros');
+    }
 }
 
+function viajeCamaioneta(){
+    
+    var pasajeros = $('#pasajeros').val();
+    var distancia=$('#destino').val();
+    var origen=$('#origen').val();
 
+    if (pasajeros==''){
+        sweetAlert('Ingre el numero de pasajeros');
+    }else if(pasajeros =='1'||pasajeros=="2"||pasajeros=="3"||pasajeros=="4"||pasajeros=="5" || pasajeros=="6"||pasajeros=="6"||pasajeros=="7"||pasajeros=="8"){
+        
+        mutiplicar =  ((origen + distancia ) *763);        
+        alert('El presio total del viaje ' + '$'+mutiplicar);
+        $('#compartir').click(compartirCamioneta);
+
+    }else{
+        sweetAlert('Maximo 8 pasajeros');
+    }
+}
+
+function viajeCamaion(){
+    var pasajeros = $('#pasajeros').val();
+    var distancia=$('#destino').val();
+    var origen=$('#origen').val();
+    
+    if (pasajeros==''){
+        sweetAlert('Ingre el numero de pasajeros');
+    }else if(pasajeros =='1'||pasajeros=="2"||pasajeros=="3"){
+        
+       mutiplicar = ((origen + distancia ) * 763);
+        alert('El presio total del viaje ' +'$'+mutiplicar);
+        $('#compartir').click(compartirCamion);
+
+    }else{
+        sweetAlert('Maximo 3 pasajeros');
+    }
+}
+
+function compartirViaje(){
+    var pasajeros = $('#pasajeros').val();
+    
+    if(pasajeros =='1'||pasajeros=="2"){
+        
+        console.log(parseInt(mutiplicar/ pasajeros));
+        
+        var resultado=parseInt(mutiplicar/ pasajeros);
+        alert('El presio total por persona ' +'$'+resultado);
+    }
+}
+function compartirAuto(){
+    //viaje por perosna en auto
+    if(pasajeros =='1'||pasajeros=="2"||pasajeros=="3"||pasajeros=="4"||pasajeros=="5"){
+        
+       mutiplicar =  ((origen + distancia )* 763);
+        console.log(parseInt(mutiplicar / pasajeros));
+        
+        var resultado=parseInt(mutiplicar/ pasajeros);
+        alert('El presio total por persona ' +'$'+resultado);
+    }
+}
+function compartirCamioneta(){
+    //viaje por perosna en camioneta
+    if(pasajeros =='1'||pasajeros=="2"||pasajeros=="3"||pasajeros=="4"||pasajeros=="5"|| pasajeros=="6"||pasajeros=="6"||pasajeros=="7"||pasajeros=="8"){
+    
+        console.log(parseInt(mutiplicar/ pasajeros));
+        
+        var resultado=parseInt(mutiplicar/ pasajeros);
+        alert('El presio total por persona ' +'$'+resultado);
+    }
+}
+function compartirCamion(){
+    //viaje por persona en camion 
+    if(pasajeros =='1'||pasajeros=="2"||pasajeros=="3"){
+        console.log(parseInt(mutiplicar / pasajeros));
+        
+        var resultado=parseInt(mutiplicar / pasajeros);
+        alert('El presio total por persona ' +'$'+resultado);
+    }
+}
 
 
 
