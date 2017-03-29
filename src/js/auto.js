@@ -1,5 +1,7 @@
+
+var auto =$('#auto').click(Auto);
+
 function Auto(){
-	this.litrosGastados = function(distancia){
-		// retorna la cantidad de litros que gasta en una distancia
-	}
+    //retorna la cantidad de litros que gasta en una distancia
+    
 }

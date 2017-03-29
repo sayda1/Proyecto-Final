@@ -1,30 +1,128 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Examen Herramientas Productividad</title>
+	<!-------------estilos otros-->
+	<link rel="stylesheet" href="src/css/bootstrap.css">
+	<link rel="stylesheet" href="src/css/font-awesome.css">
+	<!-------------estilos definidos con sass-->
+	<link rel="stylesheet" href="src/css/main.css">
 	<!--REQUIRED STYLE SHEETS-->
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
+   <!--------------CAJA------DEL--------MAPA-------------->
+    <div id="map">                
+    </div>
+    <!--------------TITULO------------------>
+	<div class="navbar navbar-inverse navbar-fixed-top" style="background: white">
 		<div class="container">
+         <div class="col-xs-6">
+             <h1>Carrocomp!</h1>
+         </div>
+         <div class="col-xs-6 ">
+             <div id="informacion">
+                <img src="src/img/info.png" alt="" style="width:12%" class="pull-right">
+             </div>
+         </div>
 		</div>
-	</div><!--END NAV SECTION -->
-	<div id="home-sec">   
-		<div class="container"  >
-		</div>
+	</div>
+	<!--------------SECION DE SELECION DESTINO Y ORIGEN-------------->
+	<div id="secDestinoOrigen">   
+		<div class="container">
+            <div class="caja_selec">
+                <h3>ORIGEN</h3>
+               <select class="selectpicker" id="origen">
+                   
+               </select>
+               <h3>DESTINO</h3>
+                <select class="selectpicker" id="destino">
+                  
+                </select>
+               <br>
+                <button id="buscar">BUSCAR</button>
+            </div>
+          
+		  <div class="info pull-right" id="informate">
+		       <h3>Carrocomp!</h3>
+		       <p>La nueva forma de moverte en la cuidad. Con carrocomp! puedes 
+		       compartir tu viaje con amigos y cobrar en costo el costo equitati 
+		       vamente</p>
+		  </div>
 	</div><!--END HOME SECTION-->  
-	<section id="info"  >
+	<section id="info">
 		<div class="container">
+		    <div class="caja" id="vehiculos">
+              <h3>VEHICULO</h3>
+              <h4>SELECIONE</h4>
+              <div class="row">
+                  <div class="col-xs-4">
+                       <input type="checkbox" id="moto">
+                   </div>
+                   <div class="col-xs-4">
+                       <img src="src/img/moto.png" alt="">
+                   </div>
+                   <div class="col-xs-4">
+                       <h4>Motocicleta</h4>
+                       <p>maximo 2 personas</p>
+                   </div>
+              </div>
+		      <div class="row">
+                   <div class="col-xs-4">
+                       <input type="checkbox" id="auto">
+                   </div>
+                   <div class="col-xs-4">
+                       <img src="src/img/auto.png" alt="" >
+                   </div>
+                   <div class="col-xs-4">
+                       <h4>Auto</h4>
+                       <p>maximo 5 personas</p>
+                   </div>
+                </div>
+               <div class="row"> 
+                   <div class="col-xs-4">
+                       <input type="checkbox" id="camioneta">
+                   </div>
+                   <div class="col-xs-4">
+                       <img src="src/img/camioneta.png" alt="">
+                   </div>
+                   <div class="col-xs-4">
+                       <h4>Camioneta</h4>
+                       <p>maximo 7 personas</p>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-xs-4">
+                       <input type="checkbox" id="camion">
+                   </div>
+                   <div class="col-xs-4">
+                       <img src="src/img/camion.png" alt="">
+                   </div>
+                   <div class="col-xs-4">
+                       <h4>Camion</h4>
+                       <p>maximo 3 personas</p>
+                   </div>
+               </div>
+               <label>Cantidad  de pasajeros</label>
+               <input type="text" id="pasajeros">
+              <button id="compartir">Compartir carro .!</button>
+            </div>
 		</div>
 	</section><!--END ABOUT SECTION-->
 	<section id="calculator" >
 		<div class="container">
+		    
 		</div>
 	</section><!--END PROJECT SECTION-->
 	<div id="footer">
 		2014 www.yourdomain.com | All Right Reserved  
 	</div><!-- END FOOTER SECTION -->
 </body>
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/bootstrap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEzRM71KTy8oS0oopI8r4evSB6L4anJLo&callback=initMap" async defer></script>
+    <script src="src/js/custom.js"></script>
+    <script src="src/js/ciudades.js"></script>
+    <script src="src/js/auto.js"></script>
 </html>

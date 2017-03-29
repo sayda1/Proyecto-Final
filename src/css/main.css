@@ -1,0 +1,73 @@
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+#secDestinoOrigen {
+  position: absolute;
+  z-index: 2;
+  top: 15%; }
+  #secDestinoOrigen .caja_selec {
+    position: absolute;
+    z-index: 2;
+    top: -10%;
+    background: #ffffff;
+    width: 30%;
+    text-align: center;
+    padding: 10px; }
+    #secDestinoOrigen .caja_selec .selectpicker {
+      width: 80%;
+      border: 1px solid #f7b617; }
+  #secDestinoOrigen #buscar {
+    position: absolute;
+    top: 108%;
+    right: 1%;
+    width: 100%;
+    background: #f7b617;
+    border: none;
+    color: #ffffff;
+    padding: 7px; }
+  #secDestinoOrigen .info {
+    background: #ffffff;
+    width: 25%;
+    text-align: center;
+    display: none; }
+
+#info {
+  position: absolute;
+  z-index: 2;
+  top: 230px;
+  display: none; }
+  #info #vehiculos {
+    background: #ffffff;
+    width: 30%;
+    height: 300px;
+    padding: 2px; }
+    #info #vehiculos img {
+      width: 50%;
+      margin: 0; }
+    #info #vehiculos p {
+      font-size: 10px;
+      margin: 0;
+      font-weight: 600; }
+    #info #vehiculos .col-xs-4 {
+      margin: 0; }
+  #info h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0; }
+  #info .row input {
+    margin-left: 12px; }
+  #info button {
+    position: absolute;
+    top: 108%;
+    right: 1%;
+    width: 100%;
+    background: #f7b617;
+    border: none;
+    color: #ffffff;
+    padding: 7px;
+    width: 30%;
+    left: 2%; }
+
+/*# sourceMappingURL=main.css.map */

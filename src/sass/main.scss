@@ -1,0 +1,95 @@
+//---------variables----
+$altura:100%;
+$ancho:100%;
+$fondo-selec:#ffffff;
+$color:#f7b617;
+//---------ESTILOS DE MAP 
+#map{
+    position: absolute;
+    height:100%;
+    width: 100%;
+    
+}
+//----------------------MIXIN
+@mixin visible{
+    position:absolute;
+    z-index: 2;
+}
+@mixin button{
+   position: absolute;
+    top: $altura + 8%;
+    right: 1%;
+    width: $ancho;
+    background:$color;
+    border: none;
+    color: $fondo-selec;
+    padding: 7px;
+}
+//------------ESTILOS DEL SELECS
+#secDestinoOrigen{
+    @include visible;
+    top: $altura - 85%;
+    .caja_selec{
+        @include visible;
+        top: -10%;
+        background:$fondo-selec;
+        width: $ancho - 70%;
+        text-align: center;
+        padding: 10px;
+        .selectpicker{
+            width: $ancho - 20%;
+            border: 1px solid $color;
+        }
+    }
+    #buscar{
+        @include button;
+    }
+    .info{
+        background:$fondo-selec;
+        width:$ancho - 75%;
+        text-align: center;
+        display: none;
+    }
+}
+//ESTILO DE LISTA DE VEHICULOS 
+#info{
+    @include visible;
+    top: 230px;
+    display: none;
+    #vehiculos{
+       background:$fondo-selec;
+        width: $ancho - 70%;
+        height: 300px;
+        padding: 2px;
+        img{
+            width: 50%;
+            margin: 0;
+        }
+        p{
+            font-size: 10px;
+            margin: 0;
+            font-weight: 600;
+        }
+        .col-xs-4{
+           margin: 0;
+        }
+    }
+    h4{
+        font-size: 16px ;
+        font-weight: bold;
+        margin: 0;
+    }
+    .row input{
+        margin-left:12px;
+    }
+    button{
+        @include button;
+        width: 30%;
+        left: 2%
+    }
+    
+}
+
+
+
+
