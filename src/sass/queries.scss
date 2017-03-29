@@ -1,8 +1,28 @@
 @media (max-width:764px) and (min-width:319px){
+    #informate{
+      display: none;
+        }
     #secDestinoOrigen .caja_selec{
-        width:100%;
+        width:90%;
+        position: absolute;
+        top: -27;
+        img{
+            position: relative;
+            top: 20px;
+        }
     }
-    #info .caja{
-        width:113%;
+    #info{
+        position: absolute;
+        top: 184px;
+        .caja{
+            width:100%;
+        }
+        button{
+            width:90%;
+            left: 5%;
+        }
     }
 };
+@media (max-width:764px) and (min-width:319px){
+    
+}

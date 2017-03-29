@@ -203,11 +203,3 @@ function compartirCamion(){
         alert('El presio total por persona ' +'$'+resultado);
     }
 }
-
-
-
-
-
-
-
-

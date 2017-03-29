@@ -6,7 +6,7 @@
 #secDestinoOrigen {
   position: absolute;
   z-index: 2;
-  top: 15%; }
+  top: 17%; }
   #secDestinoOrigen .caja_selec {
     position: absolute;
     z-index: 2;
@@ -20,23 +20,22 @@
       border: 1px solid #f7b617; }
   #secDestinoOrigen #buscar {
     position: absolute;
-    top: 108%;
     right: 1%;
-    width: 100%;
     background: #f7b617;
     border: none;
     color: #ffffff;
-    padding: 7px; }
+    padding: 7px;
+    top: 102%;
+    width: 100%; }
   #secDestinoOrigen .info {
     background: #ffffff;
     width: 25%;
-    text-align: center;
-    display: none; }
+    text-align: center; }
 
 #info {
   position: absolute;
   z-index: 2;
-  top: 230px;
+  top: 210px;
   display: none; }
   #info .caja {
     background: #ffffff;
@@ -56,14 +55,13 @@
     margin-left: 12px; }
   #info button {
     position: absolute;
-    top: 108%;
     right: 1%;
-    width: 100%;
     background: #f7b617;
     border: none;
     color: #ffffff;
     padding: 7px;
     width: 30%;
-    left: 2%; }
+    left: 1%;
+    bottom: -13%; }
 
 /*# sourceMappingURL=main.css.map */

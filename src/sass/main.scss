@@ -17,9 +17,7 @@ $color:#f7b617;
 }
 @mixin button{
    position: absolute;
-    top: $altura + 8%;
     right: 1%;
-    width: $ancho;
     background:$color;
     border: none;
     color: $fondo-selec;
@@ -28,7 +26,7 @@ $color:#f7b617;
 //------------ESTILOS DEL SELECS
 #secDestinoOrigen{
     @include visible;
-    top: $altura - 85%;
+    top: $altura - 83%;
     .caja_selec{
         @include visible;
         top: -10%;
@@ -43,18 +41,19 @@ $color:#f7b617;
     }
     #buscar{
         @include button;
+        top: 102%;
+        width: $ancho;
     }
     .info{
         background:$fondo-selec;
         width:$ancho - 75%;
         text-align: center;
-        display: none;
     }
 }
 //ESTILO DE LISTA DE VEHICULOS 
 #info{
     @include visible;
-    top: 230px;
+    top: 210px;
     display: none;
     .caja{
        background:$fondo-selec;
@@ -80,7 +79,9 @@ $color:#f7b617;
     button{
         @include button;
         width: 30%;
-        left: 2%
+        left: 1%;
+        bottom: -13%;
+        
     }
     
 }

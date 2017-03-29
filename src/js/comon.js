@@ -10,7 +10,8 @@ function initMap() {
     zoom: 8
   });
 }
+
 function informate(){
-    $('#secDestinoOrigen').hide();
+    $('#secDestinoOrigen').hide(900);
     $('#informate').show(900);
 }

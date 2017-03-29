@@ -1,8 +1,22 @@
 @media (max-width: 764px) and (min-width: 319px) {
-  #secDestinoOrigen .caja_selec {
-    width: 100%; }
+  #informate {
+    display: none; }
 
-  #info .caja {
-    width: 113%; } }
+  #secDestinoOrigen .caja_selec {
+    width: 90%;
+    position: absolute;
+    top: -27; }
+    #secDestinoOrigen .caja_selec img {
+      position: relative;
+      top: 20px; }
+
+  #info {
+    position: absolute;
+    top: 184px; }
+    #info .caja {
+      width: 100%; }
+    #info button {
+      width: 90%;
+      left: 5%; } }
 
 /*# sourceMappingURL=queries.css.map */
