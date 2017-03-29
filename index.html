@@ -45,6 +45,7 @@
             </div>
 		  <div class="info pull-right" id="informate">
 		       <h3>Carrocomp!</h3>
+		       
 		       <p>La nueva forma de moverte en la cuidad. Con carrocomp! puedes 
 		       compartir tu viaje con amigos y cobrar en costo el costo equitati 
 		       vamente</p>
@@ -52,12 +53,15 @@
 	</div>
 	<section id="info">
 		<div class="container">
-		    <div class="caja" id="vehiculos">
+		    <div class="caja">
               <h3>VEHICULO</h3>
               <h4>SELECIONE</h4>
-              <div class="row">
+              <div id="vehiculos">
+                  
+              </div>
+              <!-----<div class="row">
                   <div class="col-xs-4">
-                       <input type="checkbox" id="moto">
+                       <input type="radio" id="moto">
                    </div>
                    <div class="col-xs-4">
                        <img src="src/img/moto.png" alt="">
@@ -102,7 +106,7 @@
                        <h4>Camion</h4>
                        <p>maximo 3 personas</p>
                    </div>
-               </div>
+               </div>--->
                <label>Cantidad  de pasajeros</label>
                <input type="text" id="pasajeros">
               <button id="compartir">Compartir carro .!</button>
@@ -121,7 +125,6 @@
     <script src="src/js/jquery.js"></script>
     <script src="src/js/bootstrap.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEzRM71KTy8oS0oopI8r4evSB6L4anJLo&callback=initMap" async defer></script>
-    <script src="src/js/custom.js"></script>
+    <script src="src/js/comon.js"></script>
     <script src="src/js/ciudades.js"></script>
-    <script src="src/js/auto.js"></script>
 </html>

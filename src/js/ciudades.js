@@ -1,7 +1,10 @@
-$(document).ready(get_regiones());
-var listaCiudades;
+$(document).ready(init());
+function init(){
+    get_regiones();
+}
 function get_regiones(){
-	listaCiudades=[
+    
+	var listaCiudades=[
         {"name": "Seleciona" , "val":"0"},
 		{"name": "arica <span class='kilomeros'>2059</span>", "distance": 0, "val":"1"},
         
@@ -28,11 +31,12 @@ function get_regiones(){
         carga+=html;
     }
     var selec = $('.selectpicker').html(carga);
+    
     $('#buscar').click(elijirVehiculos);
     
 }
-
-function vehiculos(){
+///funcion para aparicion de vehiculos 
+function elijirVehiculos(){
     var origen =$('#origen');
     var destino =$('#destino');
     
@@ -41,6 +45,53 @@ function vehiculos(){
     }else if (origen.val()==destino.val()){
         alert("se dirige a la misma cuidad.")
     }else{
-        $('#info').show(100); 
+        $('#info').show(100);
+        listaVehiculos ();
     }
+    localStorage.setItem('rutaDestino', destino);
 }
+//PARA LISTA VEHICULOS
+function listaVehiculos (){
+    var lista=[
+        {
+            "input":'<input type="radio" id="moto">',
+            "imagen" :"src/img/moto.png" ,
+            "texto":"Moto </br> maximo 2 pasajeros"
+        },
+        
+        {
+         "input":'<input type="radio" id="auto">',
+         "imagen" :"src/img/auto.png",
+         "texto":"Auto </br> maximo 5 pasajeros"
+        },
+        {
+            "input":'<input type="radio" id="camioneta">',
+            "imagen" :"src/img/camioneta.png",
+            "texto":"Camioneta </br> maximo 10 personas"
+        },
+        {
+            "input":'<input type="radio" id="camion">',
+            "imagen" :"src/img/camion.png",
+            "texto":"Camion </br>maximo 3 pasajeros"
+        }
+        
+    ];
+    var carga='';
+    for (var x in lista){
+        var htmlVehiculos='<div class="col-xs-4">'+lista[x].input+'</div>'+
+            '<div class="col-xs-4"><img src="'+lista[x].imagen+'" alt=""></div>'+
+            '<div class="col-xs-4"><h3>'+lista[x].texto+'</h3></div>';
+        carga+=htmlVehiculos;
+    };
+    $('#vehiculos').html(carga);
+}
+
+
+
+
+
+
+
+
+
+

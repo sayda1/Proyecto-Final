@@ -38,19 +38,19 @@
   z-index: 2;
   top: 230px;
   display: none; }
-  #info #vehiculos {
+  #info .caja {
     background: #ffffff;
     width: 30%;
     height: 300px;
     padding: 2px; }
-    #info #vehiculos img {
+    #info .caja img {
       width: 50%;
       margin: 0; }
-    #info #vehiculos p {
+    #info .caja p {
       font-size: 10px;
       margin: 0;
       font-weight: 600; }
-    #info #vehiculos .col-xs-4 {
+    #info .caja .col-xs-4 {
       margin: 0; }
   #info h4 {
     font-size: 16px;
